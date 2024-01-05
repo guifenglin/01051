@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+            div{
+                background-color: brown;
+                width: 500px;
+                height: 300px;
+                margin: 200px;
+                text-align: center;
+                line-height: 300px;
+                color: cornsilk;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-aos="fade-up">往上淡入</div>
+        <div data-aos="fade-down">往下淡入</div>
+        <div data-aos="fade-right">往右淡入</div>
+        <div data-aos="fade-left">往左淡入</div>
+        <div data-aos="fade-up-right">往右上淡入</div>
+        <div data-aos="fade-up-left">往左上淡入</div>
+        <div data-aos="fade-down-right">往右下淡入</div>
+        <div data-aos="fade-down-left">往左下淡入</div>
+        <div data-aos="zoom-in">zoom-in</div>
+        <div data-aos="zoom-out">zoom-out</div>
+        <div data-aos="slide-up">往上位移</div>
+        <div data-aos="flip-up">向上翻頁</div>
+        <div data-aos="flip-down">向下翻頁</div>
+        <div data-aos="flip-right">向左翻頁</div>
+        <div data-aos="flip-left">向右翻頁</div>
+        <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center">
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- JS放置 </body> 結束標籤前加入以下二筆資料，一個連結JS檔，一個是設定 -->
+        <script>
+            AOS.init(); /* AOS.init(); 是什麼都不設定也要加入的！才會有作用喔！ */
+            AOS.init({
+            // 全域設計:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1400, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out-back', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+            });
+            /* 單一設計
+            <div
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center">
+            </div>
+            */
+          </script>
+    </body>
+</html>
